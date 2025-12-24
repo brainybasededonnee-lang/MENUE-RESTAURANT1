@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RESTAURAN CAHE - Menu</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: #f4f6f9;
+  color: #333;
+}
+
+/* HEADER */
+header {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+/* MENU CONTAINER */
+.menu-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+/* MENU CARD */
+.menu-card {
+  position: relative;
+  background: white;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.menu-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 45px rgba(0,0,0,0.2);
+}
+
+/* BADGE */
+.badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: #e63946;
+  color: white;
+  padding: 6px 10px;
+  font-size: 0.75rem;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.menu-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.menu-content {
+  padding: 20px;
+}
+
+.price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #2c5364;
+  margin-bottom: 15px;
+}
+
+.btn-order {
+  width: 100%;
+  padding: 12px;
+  background: #2c5364;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+footer {
+  background: #0f2027;
+  color: white;
+  text-align: center;
+  padding: 25px;
+  margin-top: 50px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>RESTAURAN CAHE</h1>
+  <p>Saveurs authentiques • Qualité • Excellence</p>
+</header>
+
+<section class="menu-container">
+
+<h2 style="grid-column:1/-1; color:#2c5364;">🍽️ Plats principaux</h2>
+
+<div class="menu-card">
+  <img src="source/image1.jpg">
+  <div class="menu-content">
+    <h3>Poulet Braisé</h3>
+    <p>Poulet bien épicé servi avec accompagnement.</p>
+    <div class="price">3 000 FCFA</div>
+    <button class="btn-order" onclick="commander('Poulet Braisé',3000)">Commander</button>
+  </div>
+</div>
+
+<div class="menu-card">
+  <img src="source/image2.jpg">
+  <div class="menu-content">
+    <h3>Riz Sauce Spéciale</h3>
+    <p>Riz parfumé accompagné de notre sauce maison.</p>
+    <div class="price">2 500 FCFA</div>
+    <button class="btn-order" onclick="commander('Riz Sauce Spéciale',2500)">Commander</button>
+  </div>
+</div>
+
+<div class="menu-card">
+  <img src="source/image3.jpg">
+  <div class="menu-content">
+    <h3>Poisson Grillé</h3>
+    <p>Poisson frais grillé avec légumes sautés.</p>
+    <div class="price">3 500 FCFA</div>
+    <button class="btn-order" onclick="commander('Poisson Grillé',3500)">Commander</button>
+  </div>
+</div>
+
+<h2 style="grid-column:1/-1; margin-top:30px; color:#2c5364;">🍔 Fast-food</h2>
+
+<div class="menu-card">
+  <div class="badge">🔥 Meilleure vente</div>
+  <img src="source/image4.jpg">
+  <div class="menu-content">
+    <h3>Burger</h3>
+    <p>Burger gourmand avec steak et fromage fondant.</p>
+    <div class="price">2 500 FCFA</div>
+    <button class="btn-order" onclick="commander('Burger',2500)">Commander</button>
+  </div>
+</div>
+
+<div class="menu-card">
+  <div class="badge">🔥 Meilleure vente</div>
+  <img src="source/image5.jpg">
+  <div class="menu-content">
+    <h3>Pizza</h3>
+    <p>Pizza au four avec sauce tomate et fromage.</p>
+    <div class="price">4 000 FCFA</div>
+    <button class="btn-order" onclick="commander('Pizza',4000)">Commander</button>
+  </div>
+</div>
+
+<div class="menu-card">
+  <img src="source/image6.jpg">
+  <div class="menu-content">
+    <h3>Salades</h3>
+    <p>Salade fraîche, légère et saine.</p>
+    <div class="price">2 000 FCFA</div>
+    <button class="btn-order" onclick="commander('Salades',2000)">Commander</button>
+  </div>
+</div>
+
+<div class="menu-card">
+  <img src="source/image7.jpg">
+  <div class="menu-content">
+    <h3>Beignets</h3>
+    <p>Beignets dorés et moelleux.</p>
+    <div class="price">1 000 FCFA</div>
+    <button class="btn-order" onclick="commander('Beignets',1000)">Commander</button>
+  </div>
+</div>
+
+<div class="menu-card">
+  <div class="badge">🔥 Meilleure vente</div>
+  <img src="source/image8.jpg">
+  <div class="menu-content">
+    <h3>Tacos</h3>
+    <p>Tacos bien garni avec sauce spéciale.</p>
+    <div class="price">3 000 FCFA</div>
+    <button class="btn-order" onclick="commander('Tacos',3000)">Commander</button>
+  </div>
+</div>
+
+<h2 style="grid-column:1/-1; margin-top:30px; color:#2c5364;">🍟 Accompagnements</h2>
+
+<div class="menu-card">
+  <img src="source/image9.jpg">
+  <div class="menu-content">
+    <h3>Frites</h3>
+    <p>Frites croustillantes et bien assaisonnées.</p>
+    <div class="price">1 500 FCFA</div>
+    <button class="btn-order" onclick="commander('Frites',1500)">Commander</button>
+  </div>
+</div>
+
+</section>
+
+<footer>
+© 2025 RESTAURAN CAHE — Tous droits réservés
+</footer>
+
+<script>
+function commander(nomPlat, prix) {
+  let qte = prompt("Nombre de plats ?");
+  if (!qte || qte <= 0) return;
+
+  let table = prompt("Numéro de table ?");
+  if (!table) return;
+
+  let total = prix * qte;
+
+  let message =
+    "🍽️ COMMANDE RESTAURAN CAHE\n\n" +
+    "Plat : " + nomPlat + "\n" +
+    "Prix unitaire : " + prix + " FCFA\n" +
+    "Quantité : " + qte + "\n" +
+    "Total : " + total + " FCFA\n" +
+    "Table : " + table;
+
+  window.open(
+    "https://wa.me/22896368928?text=" + encodeURIComponent(message),
+    "_blank"
+  );
+}
+</script>
+
+</body>
+</html>
